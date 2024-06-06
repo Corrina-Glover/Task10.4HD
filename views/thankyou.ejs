@@ -1,0 +1,25 @@
+<main>
+    <div class="container">
+        <h2>Thank You!!!</h2>
+
+        <% if (context === 'newsletter') { %>
+            <!-- Thank you message for newsletter subscription -->
+            <p>Thank you <strong><%= name %></strong> for subscribing to our Newsletter</p>
+            <p>An Email will be sent to you on <strong><%= email %>.</strong></p>
+        <% } else if (context === 'reservation') { %>
+            <!-- Thank you message for reservation -->
+            <p>Thank you <strong><%= firstName %> <%= surname %></strong> for making a reservation.</p>
+            <p>Your reservation for <%= dateOfReservation %> has been confirmed. We'll email you at <%= email %> with further details.</p>
+        <% } else if (context === 'onlineOrder') { %>
+            <!-- Thank you message for online order -->
+            <p>Thank you <strong><%= firstname %> <%= lastname %></strong> for placing an online order.</p>
+            <p>Your order will be delivered to <strong><%= address %></strong>. We'll contact you at <%= email %> or <%= phone %> for further details.</p>
+        <% } %>
+
+        <!-- Appreciation Message -->
+        <p>We appreciate your input!</p>
+
+        <!-- Link back to the form page -->
+        <p><a href="/">Click here to return to the feedback form</a></p>
+    </div>
+</main>

@@ -1,0 +1,46 @@
+<%- include('header'); -%>
+
+<body>
+    <div class="container">
+        <h1><%= title %></h1>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <% if (title === 'Reservation Feedback') { %>
+                        <th>Surname</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Date of Reservation</th>
+                        <th>Time</th>
+                        <th>Number of People</th>
+                        <th>Message</th>
+                    <% } else if (title === 'Subscription Feedback') { %>
+                        <th>Email</th>
+                    <% } %>
+                </tr>
+            </thead>
+            <tbody>
+                <% feedbackData.forEach(function(row) { %>
+                    <tr>
+                        <td><%= row.id %></td>
+                        <td><%= row.name %></td>
+                        <% if (title === 'Reservation Feedback') { %>
+                            <td><%= row.surname %></td>
+                            <td><%= row.email %></td>
+                            <td><%= row.mobile %></td>
+                            <td><%= row.dateOfReservation %></td>
+                            <td><%= row.time %></td>
+                            <td><%= row.numberOfPeople %></td>
+                            <td><%= row.message %></td>
+                        <% } else if (title === 'Subscription Feedback') { %>
+                            <td><%= row.email %></td>
+                        <% } %>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+

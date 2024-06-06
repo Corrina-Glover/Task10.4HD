@@ -1,0 +1,103 @@
+/* styles.css */
+
+/* Global styles */
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+}
+
+/* Main content */
+.main-content {
+    margin-bottom: 50px; /* Adjust as needed */
+}
+
+/* Café Chronicles section */
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+
+.img-container img {
+    max-width: 400px;
+    width: 100%;
+}
+
+.custom-bg-color {
+    background-color: #9897A9; /* Adjust the color code as needed */
+}
+
+/* Custom button style */
+.btn-outline-info {
+    color: #000;
+    border-color: #000;
+}
+
+.btn-outline-info:hover {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+
+/* Footer */
+.footer {
+    background-color: #333; /* Adjust as needed */
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer h1 {
+    font-size: 2rem;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+.footer .btn {
+    width: 100%;
+}
+
+.footer .form-control {
+    width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .footer h1 {
+        font-size: 1.5rem;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+
+    .footer .btn {
+        width: 100%;
+    }
+
+    .footer .form-control {
+        width: 100%;
+    }
+}
+
+

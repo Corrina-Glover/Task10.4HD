@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-9Oja5+4Rn4hG5uW8ptzrwjXeV/JyB1nP7uk6PPh+KsbEJlNku/qZI/vKJVFoqALrkB3IiQUajGZw9p6U1MsxYQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&display=swap">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>Menu Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .menu-item {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item .card-body {
+            padding: 30px;
+            /* Increased padding */
+        }
+
+        .menu-item .card-title {
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 20px;
+            color: #343a40;
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+        }
+
+        .quantity-controls .quantity-btn {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            font-size: 18px;
+            color: #343a40;
+            margin: 0 10px;
+        }
+
+        .quantity-input {
+            width: 60px;
+            text-align: center;
+            font-size: 16px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            padding: 8px;
+        }
+
+        #total-amount {
+            font-size: 18px;
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        .checkout-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .checkout-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+<main>
+    <div class="container">
+        <img src="gallery/cafe-1869656_1280.jpg" alt="Ice Cream" class="img-fluid">
+    </div>
+    <div class="container-fluid bg-dark text-light text-center py-4">
+        <h1> Sis N Me Cafe </h1>
+        <h3 class="lead"> Welcome to Sis N Me Cafe, where every cup tells a story.</h3>
+    </div>
+
+    <div class="container-fluid mt-5 main-content">
+        <h3 class="text-center mb-4">Cafe Menu</h3>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="col">
+                <div class="card h-100 menu-item">
+                    <div class="card-body text-center">
+                        <i class="fas fa-bread-slice fa-3x mb-3"></i>
+                        <h5 class="card-title">Breakfast</h5>
+                        <!-- Menu items with prices -->
+                        <ul id="menu" class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <label for="item1-qty">Eggs Benedict - </label>
+                                <span id="item1-price">$9.99</span>
+                                <p class="card-text">Classic eggs benedict served with hollandaise sauce on an English
+                                    muffin.</p>
+                                <div class="quantity-controls d-flex justify-content-end">
+                                    <button aria-label="Decrement" data-test="item-stepper-dec"
+                                        class="quantity-btn decrement-btn" data-action="decrement"><i
+                                            class="fas fa-minus"></i></button>
+                                    <div data-test="item-stepper-quantity" class="quantity-input">0</div>
+                                    <button aria-label="Increment" data-test="item-stepper-inc"
+                                        class="quantity-btn increment-btn" data-action="increment"><i
+                                            class="fas fa-plus"></i></button>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <label for="item2-qty">Avocado Toast - </label>
+                                <span id="item2-price">$7.99</span>
+                                <p class="card-text">Toasted bread topped with avocado, cherry tomatoes, & a sprinkle
+                                    of sea salt.</p>
+                                <div class="quantity-controls d-flex justify-content-end">
+                                    <button aria-label="Decrement" data-test="item-stepper-dec"
+                                        class="quantity-btn decrement-btn" data-action="decrement"><i
+                                            class="fas fa-minus"></i></button>
+                                    <div data-test="item-stepper-quantity" class="quantity-input">0</div>
+                                    <button aria-label="Increment" data-test="item-stepper-inc"
+                                        class="quantity-btn increment-btn" data-action="increment"><i
+                                            class="fas fa-plus"></i></button>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <label for="item3-qty">Belgian Waffles - </label>
+                                <span id="item3-price">$6.99</span>
+                                <p class="card-text">Crispy Belgian waffles served with maple syrup and whipped cream.
+                                </p>
+                                <div class="quantity-controls d-flex justify-content-end">
+                                    <button aria-label="Decrement" data-test="item-stepper-dec"
+                                        class="quantity-btn decrement-btn" data-action="decrement"><i
+                                            class="fas fa-minus"></i></button>
+                                    <div data-test="item-stepper-quantity" class="quantity-input">0</div>
+                                    <button aria-label="Increment" data-test="item-stepper-inc"
+                                        class="quantity-btn increment-btn" data-action="increment"><i
+                                            class="fas fa-plus"></i></button>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <label for="item3-qty">Pancakes - </label>
+                                <span id="item3-price">$8.99</span>
+                                <p class="card-text">Fluffy pancakes served with butter and maple syrup.</p>
+                                <div class="quantity-controls d-flex justify-content-end">
+                                    <button aria-label="Decrement" data-test="item-stepper-dec"
+                                        class="quantity-btn decrement-btn" data-action="decrement"><i
+                                            class="fas fa-minus"></i></button>
+                                    <div data-test="item-stepper-quantity" class="quantity-input">0</div>
+                                    <button aria-label="Increment" data-test="item-stepper-inc"
+                                        class="quantity-btn increment-btn" data-action="increment"><i
+                                            class="fas fa-plus"></i></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 menu-item">
+                    <div class="card-body text-center">
+                        <i class="fas fa-utensils fa-3x mb-3"></i>
+                        <h5 class="card-title">Lunch</h5>
+                        <!-- Menu items with prices -->
+                        <ul id="menu" class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <label for="item1-qty">Chicken Caesar Salad - </label>
+                                <span id="item1-price">$10.99</span>
+                                <p class="card-text">Fresh romaine lettuce, grilled chicken, croutons, and Caesar
+                                    dressing.</p>
+                                <div class="quantity-controls d-flex justify-content-end">
+                                    <button aria-label="Decrement" data-test="item-stepper-dec"
+                                        class="quantity-btn decrement-btn" data-action="decrement"><i
+                                            class="fas fa-minus"></i></button>
+                                    <div data-test="item-stepper-quantity" class="quantity-input">0</div>
+                                    <button aria-label="Increment" data-test="item-stepper-inc"
+                                        class="quantity-btn increment-btn" data-action="increment"><i
+                                            class="fas fa-plus"></i></button>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <label for="item2-qty">Club Sandwich - </label>
+                                <span id="item2-price">$9.99</span>
+                                <p class="card-text">Classic club sandwich with layers of ham, turkey, bacon, lettuce,
+                                    tomato, and mayo.</p>
+                                <div class="quantity-controls d-flex justify-content-end">
+                                    <button aria-label="Decrement" data-test="item-stepper-dec"
+                                        class="quantity-btn decrement-btn" data-action="decrement"><i
+                                            class="fas fa-minus"></i></button>
+                                    <div data-test="item-stepper-quantity" class="quantity-input">0</div>
+                                    <button aria-label="Increment" data-test="item-stepper-inc"
+                                        class="quantity-btn increment-btn" data-action="increment"><i
+                                            class="fas fa-plus"></i></button>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <label for="item3-qty">Vegetarian Wrap - </label>
+                                <span id="item3-price">$8.99</span>
+                                <p class="card-text">Grilled vegetables and hummus wrapped in a whole wheat tortilla.
+                                </p>
+                                <div class="quantity-controls d-flex justify-content-end">
+                                    <button aria-label="Decrement" data-test="item-stepper-dec"
+                                        class="quantity-btn decrement-btn" data-action="decrement"><i
+                                            class="fas fa-minus"></i></button>
+                                    <div data-test="item-stepper-quantity" class="quantity-input">0</div>
+                                    <button aria-label="Increment" data-test="item-stepper-inc"
+                                        class="quantity-btn increment-btn" data-action="increment"><i
+                                            class="fas fa-plus"></i></button>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <label for="item3-qty">Quiche Lorraine - </label>
+                                <span id="item3-price">$7.99</span>
+                                <p class="card-text">Savory quiche filled with bacon, cheese, and onions in a flaky
+                                    pastry crust.</p>
+                                <div class="quantity-controls d-flex justify-content-end">
+                                    <button aria-label="Decrement" data-test="item-stepper-dec"
+                                        class="quantity-btn decrement-btn" data-action="decrement"><i
+                                            class="fas fa-minus"></i></button>
+                                    <div data-test="item-stepper-quantity" class="quantity-input">0</div>
+                                    <button aria-label="Increment" data-test="item-stepper-inc"
+                                        class="quantity-btn increment-btn" data-action="increment"><i
+                                            class="fas fa-plus"></i></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 menu-item">
+                    <div class="card-body text-center">
+                        <i class="fas fa-birthday-cake fa-3x mb-3"></i>
+                        <h5 class="card-title">Desserts</h5>
+                        <!-- Menu items with prices -->
+                        <ul id="menu" class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <label for="item1-qty">Chocolate Brownie - </label>
+                                <span id="item1-price">$5.99</span>
+                                <p class="card-text">Delicious homemade chocolate brownie, rich and indulgent.</p>
+                                <div class="quantity-controls d-flex justify-content-end">
+                                    <button aria-label="Decrement" data-test="item-stepper-dec"
+                                        class="quantity-btn decrement-btn" data-action="decrement"><i
+                                            class="fas fa-minus"></i></button>
+                                    <div data-test="item-stepper-quantity" class="quantity-input">0</div>
+                                    <button aria-label="Increment" data-test="item-stepper-inc"
+                                        class="quantity-btn increment-btn" data-action="increment"><i
+                                            class="fas fa-plus"></i></button>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <label for="item2-qty">Apple Pie - </label>
+                                <span id="item2-price">$6.99</span>
+                                <p class="card-text">Traditional apple pie with vanilla ice cream, a classic treat.</p>
+                                <div class="quantity-controls d-flex justify-content-end">
+                                    <button aria-label="Decrement" data-test="item-stepper-dec"
+                                        class="quantity-btn decrement-btn" data-action="decrement"><i
+                                            class="fas fa-minus"></i></button>
+                                    <div data-test="item-stepper-quantity" class="quantity-input">0</div>
+                                    <button aria-label="Increment" data-test="item-stepper-inc"
+                                        class="quantity-btn increment-btn" data-action="increment"><i
+                                            class="fas fa-plus"></i></button>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <label for="item3-qty">Carrot Cake - </label>
+                                <span id="item3-price">$7.50</span>
+                                <p class="card-text">Moist carrot cake topped with cream cheese frosting, simply
+                                    delightful.</p>
+                                <div class="quantity-controls d-flex justify-content-end">
+                                    <button aria-label="Decrement" data-test="item-stepper-dec"
+                                        class="quantity-btn decrement-btn" data-action="decrement"><i
+                                            class="fas fa-minus"></i></button>
+                                    <div data-test="item-stepper-quantity" class="quantity-input">0</div>
+                                    <button aria-label="Increment" data-test="item-stepper-inc"
+                                        class="quantity-btn increment-btn" data-action="increment"><i
+                                            class="fas fa-plus"></i></button>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <label for="item3-qty">Strawberry Cheesecake - </label>
+                                <span id="item3-price">$8.25</span>
+                                <p class="card-text">Creamy cheesecake with strawberry topping, a delightful indulgence.
+                                </p>
+                                <div class="quantity-controls d-flex justify-content-end">
+                                    <button aria-label="Decrement" data-test="item-stepper-dec"
+                                        class="quantity-btn decrement-btn" data-action="decrement"><i
+                                            class="fas fa-minus"></i></button>
+                                    <div data-test="item-stepper-quantity" class="quantity-input">0</div>
+                                    <button aria-label="Increment" data-test="item-stepper-inc"
+                                        class="quantity-btn increment-btn" data-action="increment"><i
+                                            class="fas fa-plus"></i></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 menu-item">
+                    <div class="card-body text-center">
+                        <i class="fas fa-glass-martini-alt fa-3x mb-3"></i>
+                        <h5 class="card-title">Drinks</h5>
+                        <!-- Menu items with prices -->
+                        <ul id="menu" class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <label for="item1-qty">Espresso - </label>
+                                <span id="item1-price">$3.99</span>
+                                <p class="card-text">Bold espresso shot, perfect for coffee aficionados.</p>
+                                <div class="quantity-controls d-flex justify-content-end">
+                                    <button aria-label="Decrement" data-test="item-stepper-dec"
+                                        class="quantity-btn decrement-btn" data-action="decrement"><i
+                                            class="fas fa-minus"></i></button>
+                                    <div data-test="item-stepper-quantity" class="quantity-input">0</div>
+                                    <button aria-label="Increment" data-test="item-stepper-inc"
+                                        class="quantity-btn increment-btn" data-action="increment"><i
+                                            class="fas fa-plus"></i></button>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <label for="item2-qty">Cappuccino - </label>
+                                <span id="item2-price">$4.99</span>
+                                <p class="card-text">Classic cappuccino with frothy milk and rich espresso.</p>
+                                <div class="quantity-controls d-flex justify-content-end">
+                                    <button aria-label="Decrement" data-test="item-stepper-dec"
+                                        class="quantity-btn decrement-btn" data-action="decrement"><i
+                                            class="fas fa-minus"></i></button>
+                                    <div data-test="item-stepper-quantity" class="quantity-input">0</div>
+                                    <button aria-label="Increment" data-test="item-stepper-inc"
+                                        class="quantity-btn increment-btn" data-action="increment"><i
+                                            class="fas fa-plus"></i></button>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <label for="item3-qty">Latte - </label>
+                                <span id="item3-price">$4.50</span>
+                                <p class="card-text">Smooth latte made with steamed milk and creamy espresso.</p>
+                                <div class="quantity-controls d-flex justify-content-end">
+                                    <button aria-label="Decrement" data-test="item-stepper-dec"
+                                        class="quantity-btn decrement-btn" data-action="decrement"><i
+                                            class="fas fa-minus"></i></button>
+                                    <div data-test="item-stepper-quantity" class="quantity-input">0</div>
+                                    <button aria-label="Increment" data-test="item-stepper-inc"
+                                        class="quantity-btn increment-btn" data-action="increment"><i
+                                            class="fas fa-plus"></i></button>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <label for="item3-qty">Hot Chocolate - </label>
+                                <span id="item3-price">$4.25</span>
+                                <p class="card-text">Indulgent hot chocolate, a comforting treat on chilly days.</p>
+                                <div class="quantity-controls d-flex justify-content-end">
+                                    <button aria-label="Decrement" data-test="item-stepper-dec"
+                                        class="quantity-btn decrement-btn" data-action="decrement"><i
+                                            class="fas fa-minus"></i></button>
+                                    <div data-test="item-stepper-quantity" class="quantity-input">0</div>
+                                    <button aria-label="Increment" data-test="item-stepper-inc"
+                                        class="quantity-btn increment-btn" data-action="increment"><i
+                                            class="fas fa-plus"></i></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Total cost display -->
+        <div class="text-center mt-3">
+            <p id="total-cost">Total cost: $0.00</p>
+        </div>
+        <div class="text-center mt-3">
+            <a href="Checkout_Page.html" class="btn btn-primary">Order Online</a>
+        </div>
+    </div>
+</main>
+
+    <script>
+        // Get the menu items and total cost element
+        const menuItems = document.querySelectorAll('#menu li');
+        const totalCostElement = document.getElementById('total-cost');
+
+        // Function to update the total cost
+        function updateTotalCost() {
+            let totalCost = 0;
+            menuItems.forEach((menuItem) => {
+                const qtyInput = menuItem.querySelector('.quantity-input'); 
+                const priceElement = menuItem.querySelector('span');
+                const qty = parseInt(qtyInput.textContent, 10); 
+                const price = parseFloat(priceElement.textContent.replace('$', ''));
+                totalCost += qty * price;
+            });
+            totalCostElement.textContent = `Total cost: $${totalCost.toFixed(2)}`;
+
+            localStorage.setItem('totalCost', totalCost.toFixed(2));
+        }
+
+        // Add event listeners to the quantity buttons
+        menuItems.forEach((menuItem) => {
+            const decrementBtn = menuItem.querySelector('.decrement-btn');
+            const incrementBtn = menuItem.querySelector('.increment-btn');
+            decrementBtn.addEventListener('click', () => {
+                const quantityElement = menuItem.querySelector('.quantity-input');
+                let quantity = parseInt(quantityElement.textContent, 10);
+                if (quantity > 0) {
+                    quantity--;
+                    quantityElement.textContent = quantity;
+                    updateTotalCost();
+                }
+            });
+            incrementBtn.addEventListener('click', () => {
+                const quantityElement = menuItem.querySelector('.quantity-input');
+                let quantity = parseInt(quantityElement.textContent, 10);
+                quantity++;
+                quantityElement.textContent = quantity;
+                updateTotalCost();
+            });
+        });
+
+        // Initial update of the total cost
+        updateTotalCost();
+    </script>
+</body>
+
+</html>
